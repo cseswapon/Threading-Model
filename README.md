@@ -23,7 +23,7 @@ existence of individual user-level threads.
 
 ```
 
-# Many to Many Model
+# Many To Many Model
 
 ```
 Consider an online multiplayer game server that needs to handle a large number of
@@ -32,4 +32,18 @@ be processed independently to provide real-time responsiveness. The Many-to-Many
 threading model could be a suitable choice for implementing the server, allowing a pool
 of user-level threads to handle player interactions and mapping them onto a pool of
 kernel-level threads.
+```
+# One To One Model
+
+```
+The one-to-one threading model is a concurrency model
+where each high-level task or thread in a user program
+corresponds to a single kernel-level thread managed by the
+operating system.
+
+This model allows for true parallelism, as multiple threads
+can execute simultaneously on multi-core processors.
+
+The key characteristic is the direct mapping of user-level
+threads to kernel-level threads.
 ```
